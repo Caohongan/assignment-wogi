@@ -1,0 +1,140 @@
+/* ==========================================================================
+   Design tokens
+   ========================================================================== */
+:root {
+  --color-bg: #f8f8f8;
+  --color-surface: #ffffff;
+  --color-border: #ececec;
+  --color-border-strong: #d9d9d9;
+  --color-text: #1f2328;
+  --color-text-muted: #6b7280;
+  --color-text-subtle: #9aa0a6;
+
+  --color-primary: #0a7cff;
+  --color-primary-hover: #006be0;
+  --color-primary-soft: #e8f2ff;
+
+  --color-success: #1aaf6c;
+  --color-success-soft: #e6f7ef;
+  --color-danger: #f0384f;
+  --color-danger-soft: #feeaed;
+
+  --radius-sm: 3px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+
+  --shadow-card: 0 1px 4px rgba(0, 0, 0, 0.08);
+  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --focus-ring: 0 0 0 3px rgba(10, 124, 255, 0.25);
+
+  --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+
+  --page-gutter: 16px;
+  --page-max-width: 1200px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --page-gutter: 32px;
+  }
+}
+
+/* ==========================================================================
+   Reset
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+dl,
+dd {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   Shared helpers
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: 0 var(--page-gutter);
+}
+
+.page-title {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.card {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
